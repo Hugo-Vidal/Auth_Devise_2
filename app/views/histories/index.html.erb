@@ -14,9 +14,10 @@
         <%= link_to(image_tag(history.picture.thumb), history) if history.picture? %>
         <div class="caption">
           <h3><%= history.title %></h3>
+          <h2><%= %></h2>
           <small><%= time_ago_in_words(history.created_at) %> ago</small>
           <p><%= history.content.truncate(150)  %></p>
-          <% if user_signed_in? && current_user == history.user %>
+          <% if (current_user == history.user) || current_user.try(:admin) %>
             <p>
               <%= link_to 'Show', history, class: "btn btn-primary" %> 
               <%= link_to 'Edit', edit_history_path(history), class: "btn btn-warning" %> 
