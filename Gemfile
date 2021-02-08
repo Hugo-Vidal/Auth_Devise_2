@@ -32,7 +32,7 @@ gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 # gem 'bcrypt', '~> 3.1.7'
 
 # gems for images
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem 'mini_magick'
 
 # Use Capistrano for deployment
